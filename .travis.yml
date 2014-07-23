@@ -2,16 +2,16 @@ language: python
 # Python versions to test
 python:
   - "2.6"
-  # - "2.7"
+  - "2.7"
 # ROOT versions to test
 env:
   - ROOT_VERSION=5.34.19
-  # - ROOT_VERSION=6.00.02
+  - ROOT_VERSION=6.00.02
 # Grab ROOT, extract it, and source its set up script
 install:
-  - wget --no-check-certificate https://dl.dropboxusercontent.com/u/37461/travis-ci-root-builds/ROOT-${ROOT_VERSION}_Python_${TRAVIS_PYTHON_VERSION}.tar.gz
-  - tar xzf ROOT-${ROOT_VERSION}_Python_${TRAVIS_PYTHON_VERSION}.tar.gz
-  - mv ROOT-${ROOT_VERSION}_Python_${TRAVIS_PYTHON_VERSION}/root root
+  - wget --no-check-certificate https://dl.dropboxusercontent.com/u/37461/travis-ci-root-builds/ROOT-${ROOT_VERSION}_Python-${TRAVIS_PYTHON_VERSION}.tar.gz
+  - tar xzf ROOT-${ROOT_VERSION}_Python-${TRAVIS_PYTHON_VERSION}.tar.gz
+  - mv ROOT-${ROOT_VERSION}_Python-${TRAVIS_PYTHON_VERSION}/root root
   - source root/bin/thisroot.sh
 script:
   - root -l -q
