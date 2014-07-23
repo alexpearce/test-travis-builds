@@ -1,3 +1,3 @@
-# Travis CI testing [![Build status](https://travis-ci.org/alexpearce/test-travis-builds.svg)](http://travis-ci.org/alexpearce/test-travis-builds)
+# Test Travis CI ROOT builds [![Build status](https://travis-ci.org/alexpearce/test-travis-builds.svg)](http://travis-ci.org/alexpearce/test-travis-builds)
 
-A temporary repository to test ROOT builds on Travis CI.
+An example of how to use the [Travis CI ROOT builds](https://github.com/alexpearce/travis-ci-root-builds) on [Travis CI](http://travis-ci.com/).
