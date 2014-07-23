@@ -7,6 +7,17 @@ python:
 env:
   - ROOT_VERSION=5.34.19
   - ROOT_VERSION=6.00.02
+# Install GCC 4.8, required for ROOT 6
+before_install:
+  - add-apt-repository -y ppa:ubuntu-toolchain-r/test
+  - apt-get -y update
+  - apt-get -y install gcc-4.8 g++-4.8
+  - update-alternatives --remove-all gcc
+  - update-alternatives --remove-all g++
+  - update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 20
+  - update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 20
+  - update-alternatives --config gcc
+  - update-alternatives --config g++
 # Grab ROOT, extract it, and source its set up script
 install:
   - wget --no-check-certificate https://dl.dropboxusercontent.com/u/37461/travis-ci-root-builds/ROOT-${ROOT_VERSION}_Python-${TRAVIS_PYTHON_VERSION}.tar.gz
