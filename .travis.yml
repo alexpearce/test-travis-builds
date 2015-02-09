@@ -18,7 +18,7 @@ before_install:
   - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 20
 # Grab ROOT, extract it, and source its set up script
 install:
-  - wget --no-check-certificate https://dl.dropboxusercontent.com/u/37461/travis-ci-root-builds/ROOT-${ROOT_VERSION}_Python-${TRAVIS_PYTHON_VERSION}.tar.gz
+  - wget http://downloads.sourceforge.net/project/travis-ci-root-builds/ROOT-${ROOT_VERSION}_Python-${TRAVIS_PYTHON_VERSION}.tar.gz
   - tar xzf ROOT-${ROOT_VERSION}_Python-${TRAVIS_PYTHON_VERSION}.tar.gz
   - mv ROOT-${ROOT_VERSION}_Python-${TRAVIS_PYTHON_VERSION}/root* root
   - source root/bin/thisroot.sh
